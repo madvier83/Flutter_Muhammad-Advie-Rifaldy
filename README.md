@@ -17,6 +17,9 @@
       - Resume Materi KMFlutter – Basic Version and Branch Management (Git) - [(GoogleDocs)](https://docs.google.com/document/d/1Upx_RDR4Wu4WjOM22IVaGhTTyMW9o8yM/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
     - Fundamental Dart
       - Latihan – Fundamental Dart - [(GoogleDocs)](https://docs.google.com/document/d/1iH5HZcEk1Mc2fpWSUA87ZndYByypQZHf/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
+      - Resume Materi KMFluter – Fundamental Dart - [(GoogleDocs)](https://docs.google.com/document/d/1xtoeWe6GTcXND7vGW9WzxPfjD6kRp2lV_sV552S6XEk/edit?usp=sharing)
+
+- Minggu 2
 ### Links <br />
 Notion       : https://cobalt-bike-c9e.notion.site/Kelas-Reguler-72a2cc17881e47c39cf2cc7f27caeb9d <br />
 LogBook      : https://kampusmerdeka.kemdikbud.go.id/activity/active <br />

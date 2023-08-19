@@ -6,4 +6,4 @@
 
 #### 📝 Resume Materi KMFlutter – Fundamental Dart
 
-[(-)]() <br>
+[(GoogleDocs)](https://docs.google.com/document/d/1xtoeWe6GTcXND7vGW9WzxPfjD6kRp2lV_sV552S6XEk/edit?usp=sharing) <br>
