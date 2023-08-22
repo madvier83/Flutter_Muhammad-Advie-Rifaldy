@@ -21,6 +21,9 @@
       - 📝 Resume Materi KMFluter – Fundamental Dart - [(GoogleDocs)](https://docs.google.com/document/d/1xtoeWe6GTcXND7vGW9WzxPfjD6kRp2lV_sV552S6XEk/edit?usp=sharing)
 
 - Minggu 2
+  - Branching, Looping, Function  
+      - 📝 Latihan – Branching, Looping, Function - [(GoogleDocs)](https://docs.google.com/document/d/1uAVPe9Km989dspm5mAukdvYADttT_kp-/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
+      - 📝 Resume Materi KMFlutter – Branching, Looping, Function - [(GoogleDocs)](https://docs.google.com/document/d/1bY9aD50BabhKK0NP8xVYJ7H3KhdiVb6x/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
 ### Links <br />
 Notion       : https://cobalt-bike-c9e.notion.site/Kelas-Reguler-72a2cc17881e47c39cf2cc7f27caeb9d <br />
 LogBook      : https://kampusmerdeka.kemdikbud.go.id/activity/active <br />
