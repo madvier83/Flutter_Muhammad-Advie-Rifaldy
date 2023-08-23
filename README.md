@@ -24,6 +24,10 @@
   - Branching, Looping, Function  
       - 📝 Latihan – Branching, Looping, Function - [(GoogleDocs)](https://docs.google.com/document/d/1uAVPe9Km989dspm5mAukdvYADttT_kp-/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
       - 📝 Resume Materi KMFlutter – Branching, Looping, Function - [(GoogleDocs)](https://docs.google.com/document/d/1bY9aD50BabhKK0NP8xVYJ7H3KhdiVb6x/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
+  - Advance Function – Async-Await – Collection  
+      - 📝 Latihan – Advance Function – Async-Await – Collection - [(GoogleDocs)](https://docs.google.com/document/d/14dQKsoDJACQnSkDV5GfoBKQYBXZG60q9/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
+      - 📝 Resume Materi KMFlutter – Advance Function – Async-Await – Collection - [(GoogleDocs)](https://docs.google.com/document/d/1ekchE6BHoFVSav5Jfka9QOzRrWyY93_U/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
+
 ### Links <br />
 Notion       : https://cobalt-bike-c9e.notion.site/Kelas-Reguler-72a2cc17881e47c39cf2cc7f27caeb9d <br />
 LogBook      : https://kampusmerdeka.kemdikbud.go.id/activity/active <br />
