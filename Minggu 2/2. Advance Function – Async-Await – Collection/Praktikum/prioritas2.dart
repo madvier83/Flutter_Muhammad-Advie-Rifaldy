@@ -1,7 +1,7 @@
 void main() async {
   // No3
-  var hasil = await faktorial(10);
-  print(hasil);
+  // var hasil = await faktorial(10);
+  // print(hasil);
 
   // No2
   // var data = [7, 5, 3, 5, 2, 1];
