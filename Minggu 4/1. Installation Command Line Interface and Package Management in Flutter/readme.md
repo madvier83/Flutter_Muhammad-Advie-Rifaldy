@@ -1,3 +1,3 @@
  - Installation – Command Line Interface
-    - 📝 Latihan –  Installation – Command Line Interface - [(GoogleDocs)](https://docs.google.com/document/d/1rvtqb3L2Xgm1p1eCvnxtPO-XvMZDKDmH/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
+    - 📝 Latihan –  Installation – Command Line Interface - [(GoogleDocs)](https://docs.google.com/document/d/1B0FXuWiyPTs0hA4uVUgxZA3XXinDbLGt/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
     - 📝 Resume Materi KMFlutte –  Installation – Command Line Interface - [(GoogleDocs)](https://docs.google.com/document/d/19eDjdL6PwbhUsjwTaJkUMJR9_ZX3pQaj/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
