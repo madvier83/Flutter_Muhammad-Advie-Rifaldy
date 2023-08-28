@@ -1,0 +1,3 @@
+- Platform Widget
+    - 📝 Latihan –  Platform Widget - [(GoogleDocs)](https://docs.google.com/document/d/1FnN4DfGq50gP7lbvXzWu8HYoFW5v2MVi/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
+    - 📝 Resume Materi KMFlutte –  Platform Widget - [(GoogleDocs)](https://docs.google.com/document/d/1muoMcKT1CZiZgS__VF1isqSVBvw4KtJg/edit?usp=sharing&ouid=117292295682396853576&rtpof=true&sd=true)
