@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:prioritas1/home_page.dart';
-import 'package:prioritas1/soal_eksplorasi_page.dart';
+import 'package:prioritas1/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color(0xFF6200EE),
         secondaryHeaderColor: const Color(0xFF03DAC5),
       ),
-      // home: const HomePage(),
-      home: const SoalEksplorasiPage(),
+      home: const HomePage(),
     );
   }
 }
