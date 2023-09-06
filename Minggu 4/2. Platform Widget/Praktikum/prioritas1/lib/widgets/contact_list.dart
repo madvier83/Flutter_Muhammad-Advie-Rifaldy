@@ -10,7 +10,7 @@ class ContactList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.orange,
         child: Text(
           title[0],
           style: const TextStyle(color: Colors.white),
