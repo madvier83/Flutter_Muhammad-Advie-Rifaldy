@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:prioritas1/models/contact_model.dart';
 
 class ContactList extends StatelessWidget {
-  final String title;
-  final String subtitle;
+  final Contact contact;
 
-  const ContactList({required this.title, required this.subtitle, super.key});
+  const ContactList({required this.contact, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +12,12 @@ class ContactList extends StatelessWidget {
       leading: CircleAvatar(
         backgroundColor: Colors.orange,
         child: Text(
-          title[0],
+          contact.name[0],
           style: const TextStyle(color: Colors.white),
         ),
       ),
-      title: Text(title),
-      subtitle: Text(subtitle),
+      title: Text(contact.name),
+      subtitle: Text(contact.phone),
     );
   }
 }
