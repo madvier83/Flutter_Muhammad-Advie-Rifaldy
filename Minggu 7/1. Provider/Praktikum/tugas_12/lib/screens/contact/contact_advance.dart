@@ -19,21 +19,6 @@ class ContactAdvanceProvider extends StatefulWidget {
 }
 
 class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
-  var formKey = GlobalKey<FormState>();
-  var formKeyUpdate = GlobalKey<FormState>();
-
-  var name = TextEditingController();
-  var phone = TextEditingController();
-  DateTime _date = DateTime.now();
-  Color _color = Colors.purple;
-  String _fileName = "";
-
-  var nameUpdate = TextEditingController();
-  var phoneUpdate = TextEditingController();
-  DateTime _dateUpdate = DateTime.now();
-  Color _colorUpdate = Colors.purple;
-  String _fileNameUpdate = "";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,12 +51,12 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
   Widget buildAddForm() {
     final contactProvider = Provider.of<ContactAdvanceStore>(context);
     return Form(
-      key: formKey,
+      key: contactProvider.formKey,
       child: Column(
         children: [
           TextFieldGlobal(
             label: "Name",
-            controller: name,
+            controller: contactProvider.name,
             validator: (value) {
               if (Validator().validateName(value) != null) {
                 return Validator().validateName(value);
@@ -82,7 +67,7 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
           const SizedBox(height: 16),
           TextFieldGlobal(
             label: "Phone",
-            controller: phone,
+            controller: contactProvider.phone,
             validator: (value) {
               if (Validator().validatePhone(value) != null) {
                 return Validator().validatePhone(value);
@@ -92,31 +77,31 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
           ),
           const SizedBox(height: 16),
           DatePicker1(
-            date: _date,
+            date: contactProvider.date,
             onChange: (DateTime value) {
               setState(
                 () {
-                  _date = value;
+                  contactProvider.date = value;
                 },
               );
             },
           ),
           ColorPicker1(
-            color: _color,
+            color: contactProvider.color,
             onChange: (Color color) {
               setState(
                 () {
-                  _color = color;
+                  contactProvider.color = color;
                 },
               );
             },
           ),
           FilePicker1(
-            value: _fileName,
+            value: contactProvider.fileName,
             onChange: (value) {
               setState(
                 () {
-                  _fileName = value;
+                  contactProvider.fileName = value;
                 },
               );
             },
@@ -127,22 +112,22 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
             children: [
               FilledButton(
                 onPressed: () {
-                  if (!formKey.currentState!.validate()) return;
+                  if(!contactProvider.formKey.currentState!.validate()) return;
                   contactProvider.addContact(
                     Contact(
-                      title: name.text,
-                      subtitle: phone.text,
-                      color: _color,
-                      date: _date,
-                      file: _fileName,
+                      title: contactProvider.name.text,
+                      subtitle: contactProvider.phone.text,
+                      color: contactProvider.color,
+                      date: contactProvider.date,
+                      file: contactProvider.fileName,
                     ),
                   );
 
-                  name.text = "";
-                  phone.text = "";
-                  _color = Colors.purple;
-                  _date = DateTime.now();
-                  _fileName = "";
+                  contactProvider.name.text = "";
+                  contactProvider.phone.text = "";
+                  contactProvider.color = Colors.purple;
+                  contactProvider.date = DateTime.now();
+                  contactProvider.fileName = "";
                 },
                 child: const Text("Submit"),
               )
@@ -155,13 +140,15 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
   }
 
   Widget buildUpdateForm(int index, StateSetter setState) {
+    final contactProvider =
+        Provider.of<ContactAdvanceStore>(context, listen: false);
     return Form(
-      key: formKeyUpdate,
+      key: contactProvider.formKeyUpdate,
       child: Column(
         children: [
           TextFieldGlobal(
             label: "Name",
-            controller: nameUpdate,
+            controller: contactProvider.nameUpdate,
             validator: (value) {
               if (Validator().validateName(value) != null) {
                 return Validator().validateName(value);
@@ -172,7 +159,7 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
           const SizedBox(height: 16),
           TextFieldGlobal(
             label: "Phone",
-            controller: phoneUpdate,
+            controller: contactProvider.phoneUpdate,
             validator: (value) {
               if (Validator().validatePhone(value) != null) {
                 return Validator().validatePhone(value);
@@ -182,31 +169,31 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
           ),
           const SizedBox(height: 16),
           DatePicker1(
-            date: _dateUpdate,
+            date: contactProvider.dateUpdate,
             onChange: (DateTime value) {
               setState(
                 () {
-                  _dateUpdate = value;
+                  contactProvider.dateUpdate = value;
                 },
               );
             },
           ),
           ColorPicker1(
-            color: _colorUpdate,
+            color: contactProvider.colorUpdate,
             onChange: (Color color) {
               setState(
                 () {
-                  _colorUpdate = color;
+                  contactProvider.colorUpdate = color;
                 },
               );
             },
           ),
           FilePicker1(
-            value: _fileNameUpdate,
+            value: contactProvider.fileNameUpdate,
             onChange: (value) {
               setState(
                 () {
-                  _fileNameUpdate = value;
+                  contactProvider.fileNameUpdate = value;
                 },
               );
             },
@@ -244,11 +231,11 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
                 contactProvider.updateContact(
                   index,
                   Contact(
-                    title: nameUpdate.text,
-                    subtitle: phoneUpdate.text,
-                    date: _dateUpdate,
-                    color: _colorUpdate,
-                    file: _fileNameUpdate,
+                    title: contactProvider.nameUpdate.text,
+                    subtitle: contactProvider.phoneUpdate.text,
+                    date: contactProvider.dateUpdate,
+                    color: contactProvider.colorUpdate,
+                    file: contactProvider.fileNameUpdate,
                   ),
                 );
                 Navigator.of(context).pop();
@@ -272,11 +259,11 @@ class _ContactAdvanceProviderState extends State<ContactAdvanceProvider> {
         return ContactListTile(
           data: data,
           onUpdate: () {
-            nameUpdate.text = contactProvider.contacts[index].title;
-            phoneUpdate.text = contactProvider.contacts[index].subtitle;
-            _dateUpdate = contactProvider.contacts[index].date;
-            _colorUpdate = contactProvider.contacts[index].color;
-            _fileNameUpdate = contactProvider.contacts[index].file;
+            contactProvider.nameUpdate.text = contactProvider.contacts[index].title;
+            contactProvider.phoneUpdate.text = contactProvider.contacts[index].subtitle;
+            contactProvider.dateUpdate = contactProvider.contacts[index].date;
+            contactProvider.colorUpdate = contactProvider.contacts[index].color;
+            contactProvider.fileNameUpdate = contactProvider.contacts[index].file;
             onUpdate(index);
           },
           onDelete: () {

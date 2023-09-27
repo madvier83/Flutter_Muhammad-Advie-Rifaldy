@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tugas_12/bloc/bloc/counter_bloc.dart';
+import 'package:tugas_12/bloc/counter/counter_bloc.dart';
 import 'package:tugas_12/bloc/contact/contact_bloc.dart';
-import 'package:tugas_12/bloc/contact/contact_state.dart';
-import 'package:tugas_12/screens/bloc_provider.dart';
+import 'package:tugas_12/screens/bloc_provider_test.dart';
 import 'package:tugas_12/screens/contact/contact_advance.dart';
 import 'package:tugas_12/screens/gallery_screen.dart';
 

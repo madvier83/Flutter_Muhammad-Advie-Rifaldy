@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Home Page"),
         centerTitle: true,
       ),
-      drawer: const DrawerGlobal(),
+      drawer: DrawerGlobal(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   (route) => false,
                 );
               },
-              child: Text("Logout"),
+              child: const Text("Logout"),
             ),
           ],
         ),

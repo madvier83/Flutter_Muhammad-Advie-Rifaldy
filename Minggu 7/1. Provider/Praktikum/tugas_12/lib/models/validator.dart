@@ -1,5 +1,5 @@
 class Validator {
-  String? validateName(value) {
+  String? validateName(String? value) {
     if (value?.isEmpty ?? false) {
       return 'Nama harus di isi';
     }
@@ -15,13 +15,13 @@ class Validator {
       }
     }
     RegExp regex = RegExp(r'^[a-zA-Z\s]+$');
-    if (!regex.hasMatch(value)) {
+    if (!regex.hasMatch(value ?? "")) {
       return 'Nama tidak boleh mengandung angka atau karakter khusus';
     }
     return null;
   }
 
-  String? validatePhone(value) {
+  String? validatePhone(String? value) {
     if (value?.isEmpty ?? false) {
       return 'Nomor telepon harus di isi';
     }
@@ -31,11 +31,11 @@ class Validator {
     if ((value?.length ?? 0) >= 15) {
       return 'Panjang nomor telepon maksimal 15 digit';
     }
-    if (value[0] != "0") {
+    if (value?[0] != "0") {
       return 'Nomor telepon harus dimulai dengan angka 0';
     }
     RegExp regex = RegExp(r'^[0-9]+$');
-    if (!regex.hasMatch(value)) {
+    if (!regex.hasMatch(value ?? "")) {
       return 'Nomor telepon harus terdiri dari angka saja';
     }
     return null;

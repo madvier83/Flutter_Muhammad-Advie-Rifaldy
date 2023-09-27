@@ -31,7 +31,7 @@ class DrawerGlobal extends StatelessWidget {
         const Divider(),
         const ListTile(
           title: Text(
-            "Flutter State Management",
+            "Flutter State Management (Provider)",
             style: TextStyle(fontSize: 12, color: Colors.grey),
           ),
         ),

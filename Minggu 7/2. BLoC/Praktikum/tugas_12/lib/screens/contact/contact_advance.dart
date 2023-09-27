@@ -12,7 +12,6 @@ import 'package:tugas_12/components/text_field_global.dart';
 import 'package:tugas_12/components/color_picker.dart';
 import 'package:tugas_12/models/contact_model.dart';
 import 'package:tugas_12/models/validator.dart';
-import 'package:tugas_12/stores/contact_advance.dart';
 
 class ContactAdvanceBloc extends StatefulWidget {
   const ContactAdvanceBloc({super.key});
@@ -245,6 +244,7 @@ class _ContactAdvanceBlocState extends State<ContactAdvanceBloc> {
                   );
                 },
               ),
+              // content: buildUpdateForm(index, setState),
               actions: [
                 TextButton(
                   child: const Text("Cancel"),
@@ -266,6 +266,7 @@ class _ContactAdvanceBlocState extends State<ContactAdvanceBloc> {
                             ),
                           ),
                         );
+                    setState(() {});
                     Navigator.of(context).pop();
                   },
                   child: const Text("Save"),

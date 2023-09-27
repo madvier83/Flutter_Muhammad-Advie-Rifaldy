@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tugas_12/bloc/bloc/counter_state.dart';
 import 'package:tugas_12/bloc/contact/contact_event.dart';
 import 'package:tugas_12/bloc/contact/contact_state.dart';
 import 'package:tugas_12/models/contact_model.dart';

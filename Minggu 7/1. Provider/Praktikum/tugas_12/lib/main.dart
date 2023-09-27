@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_12/screens/bloc_provider.dart';
 import 'package:tugas_12/screens/contact/contact_advance.dart';
 import 'package:tugas_12/screens/state_provider_screen.dart';
 import 'package:tugas_12/screens/gallery_screen.dart';
@@ -41,7 +40,6 @@ class MyApp extends StatelessWidget {
           "/contact": (context) => const ContactAdvanceProvider(),
           "/counter": (context) => const CounterProvider(),
           "/contactProvider": (context) => const StateProvider(),
-          "/counterBloc": (context) => const BlocScreen(),
         },
       ),
     );
