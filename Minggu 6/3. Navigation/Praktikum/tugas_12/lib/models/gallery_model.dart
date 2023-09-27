@@ -1,9 +1,9 @@
-class Gallery {
+class GalleryModel {
   String url;
   String title;
   String subtitle;
 
-  Gallery({
+  GalleryModel({
     required this.url,
     required this.title,
     required this.subtitle,

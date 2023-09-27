@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_12/models/gallery_model.dart';
+// import 'package:tugas_12/models/gallery_model.dart';
 
 class GalleryDetail extends StatelessWidget {
-  final Gallery item;
-  const GalleryDetail({super.key, required this.item});
+  // final Gallery item;
+  const GalleryDetail({super.key});
+  // const GalleryDetail({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
+    final arg = ModalRoute.of(context)!.settings.arguments as GalleryModel;
     return Scaffold(
       appBar: AppBar(
         title: const Text("Gallery Detail"),
@@ -26,13 +29,13 @@ class GalleryDetail extends StatelessWidget {
                   width: double.infinity,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(16),
-                    child: Image.network(item.url),
+                    child: Image.network(arg.url),
                   ),
                 ),
               ),
               const SizedBox(height: 16),
               Text(
-                item.title,
+                arg.title,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 24,
@@ -40,12 +43,12 @@ class GalleryDetail extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                item.subtitle,
+                arg.subtitle,
                 textAlign: TextAlign.justify,
               ),
               const SizedBox(height: 64),
               Text(
-                "Source: ${item.url}",
+                "Source: ${arg.url}",
                 softWrap: true,
                 overflow: TextOverflow.ellipsis,
               )

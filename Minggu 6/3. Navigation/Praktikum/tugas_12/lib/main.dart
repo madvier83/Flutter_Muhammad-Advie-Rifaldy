@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_12/screens/advance_form_contact.dart';
+import 'package:tugas_12/screens/gallery_detail_screen.dart';
 import 'package:tugas_12/screens/gallery_screen.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => const GalleryScreen(),
+        "/galleryDetail": (context) => const GalleryDetail(),
         "/contact": (context) => const AdvanceFormContact(),
       },
     );

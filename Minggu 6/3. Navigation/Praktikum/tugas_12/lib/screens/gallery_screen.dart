@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas_12/components/drawer_global.dart';
 import 'package:tugas_12/models/gallery_model.dart';
-import 'package:tugas_12/screens/gallery_detail_screen.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});
@@ -11,32 +10,32 @@ class GalleryScreen extends StatefulWidget {
 }
 
 class _GalleryScreenState extends State<GalleryScreen> {
-  List<Gallery> items = [
-    Gallery(
+  List<GalleryModel> items = [
+    GalleryModel(
         url:
             "https://images.unsplash.com/photo-1495287924875-c158d2e8aafc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
         title: "Flowers",
         subtitle:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
-    Gallery(
+    GalleryModel(
         url:
             "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
         title: "Plant",
         subtitle:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
-    Gallery(
+    GalleryModel(
         url:
             "https://images.unsplash.com/photo-1494516192674-b82b5f1e61dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
         title: "Nature",
         subtitle:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
-    Gallery(
+    GalleryModel(
         url:
             "https://plus.unsplash.com/premium_photo-1675873580364-8845f681b4ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
         title: "Flower 2",
         subtitle:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
-    Gallery(
+    GalleryModel(
         url:
             "https://images.unsplash.com/photo-1470509037663-253afd7f0f51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
         title: "Sun Flower",
@@ -44,7 +43,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
   ];
 
-  late Gallery selectedItem = items.first;
+  late GalleryModel selectedItem = items.first;
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +102,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,
                           ),
-                          const SizedBox(height: 64),
+                          const SizedBox(height: 44),
                           Expanded(
                             child: Column(
                               children: [
@@ -120,14 +119,19 @@ class _GalleryScreenState extends State<GalleryScreen> {
                                     TextButton(
                                       onPressed: () {
                                         Navigator.of(context).pop();
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                            builder: (context) {
-                                              return GalleryDetail(
-                                                item: selectedItem,
-                                              );
-                                            },
-                                          ),
+                                        // Navigator.of(context).push(
+                                        //   MaterialPageRoute(
+                                        //     builder: (context) {
+                                        //       return GalleryDetail(
+                                        //         item: selectedItem,
+                                        //       );
+                                        //     },
+                                        //   ),
+                                        // );
+                                        Navigator.pushNamed(
+                                          context,
+                                          "/galleryDetail",
+                                          arguments: selectedItem,
                                         );
                                       },
                                       child: const Text("Yes"),
