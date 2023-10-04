@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Home Page"),
         centerTitle: true,
       ),
-      drawer: DrawerGlobal(),
+      drawer: const DrawerGlobal(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

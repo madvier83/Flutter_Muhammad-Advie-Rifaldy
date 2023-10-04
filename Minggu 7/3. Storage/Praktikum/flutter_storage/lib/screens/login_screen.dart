@@ -23,23 +23,24 @@ class _LoginScreenState extends State<LoginScreen> {
   void initState() {
     print("initState executed");
     super.initState();
-    checkLogin();
+    checkLogin(context);
   }
 
-  void checkLogin() async {
+  void checkLogin(BuildContext context) async {
     loginData = await SharedPreferences.getInstance();
     newUser = loginData.getBool("login") ?? true;
 
     if (newUser == false) {
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
-        ),
-        (route) => false,
-      );
+      if (context.mounted) {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomeScreen(),
+          ),
+          (route) => false,
+        );
+      }
       // print("Logged in");
-      // Navigator.pushNamed(context, "/home");
     }
   }
 

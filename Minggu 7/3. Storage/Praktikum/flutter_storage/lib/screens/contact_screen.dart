@@ -73,7 +73,7 @@ class _ContactScreenState extends State<ContactScreen> {
             title: const Text("Contacts"),
             centerTitle: true,
           ),
-          drawer: DrawerGlobal(),
+          drawer: const DrawerGlobal(),
           body: SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -161,10 +161,10 @@ class _ContactScreenState extends State<ContactScreen> {
                     var data = ContactModel(name: name.text, phone: phone.text);
                     Provider.of<DbManager>(context, listen: false)
                         .addTask(data);
+                    name.clear();
+                    phone.clear();
+                    FocusManager.instance.primaryFocus?.unfocus();
                   }
-                  name.clear();
-                  phone.clear();
-                  FocusManager.instance.primaryFocus?.unfocus();
                 },
                 child: const Text("Submit"),
               )
