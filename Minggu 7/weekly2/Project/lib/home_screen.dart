@@ -113,15 +113,45 @@ class _HomeScreenState extends State<HomeScreen> {
                         CircleAvatar(
                           child: Icon(Icons.flutter_dash),
                         ),
-                        SizedBox(height: 16,),
+                        SizedBox(
+                          height: 16,
+                        ),
                         Text(
                           "Flutter Course",
                           style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold
-                          ),
+                              fontSize: 24, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 16,),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Text(
+                          "Flutter adalah sebuah framework aplikasi mobile sumber terbuka yang diciptakan oleh Google. Flutter digunakan dalam pengembangan aplikasi untuk sistem operasi Android, iOS, Windows, Linux, MacOS, serta menjadi metode utama untuk membuat aplikasi Google Fuchsia.",
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          child: Icon(Icons.flutter_dash),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Text(
+                          "React Course",
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
                         Text(
                           "Flutter adalah sebuah framework aplikasi mobile sumber terbuka yang diciptakan oleh Google. Flutter digunakan dalam pengembangan aplikasi untuk sistem operasi Android, iOS, Windows, Linux, MacOS, serta menjadi metode utama untuk membuat aplikasi Google Fuchsia.",
                           textAlign: TextAlign.justify,
