@@ -24,11 +24,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.dark(
           useMaterial3: true,
         ),
-        // theme: ThemeData(
-        //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        //   useMaterial3: true,
-        // ),
-        // home: const HomeScreen(),
         initialRoute: "/home",
         routes: {
           "/home": (context) => const HomeScreen(),
