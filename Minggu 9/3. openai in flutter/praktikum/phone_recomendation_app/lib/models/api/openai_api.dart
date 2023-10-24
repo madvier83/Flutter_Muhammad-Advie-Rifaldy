@@ -33,6 +33,7 @@ class OpenAiApi {
           },
         ),
       );
+      // print(response.toString());
       return gptResponseFromJson(response.toString());
     } catch (e) {
       throw Exception("Error: $e");

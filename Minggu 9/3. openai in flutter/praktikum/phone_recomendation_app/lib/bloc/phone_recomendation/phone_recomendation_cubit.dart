@@ -21,6 +21,7 @@ class PhoneRecomendationCubit extends Cubit<PhoneRecomendationState> {
       emit(PhoneRecomendationSuccess(
           result: response.choices![0].message!.content ?? ""));
     } catch (e) {
+      print("Error: $e");
       emit(PhoneRecomendationSuccess(result: "Error"));
     }
   }
